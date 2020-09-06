@@ -1,3 +1,5 @@
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable no-console */
 describe('for asynchronous', () => {
   it('should return immediately and later trigger the callback', (done) => {
     const logs = [];
@@ -6,9 +8,8 @@ describe('for asynchronous', () => {
 
       // <--start
       // Please write down the correct value. You should write the final result directly.
-      const expected = undefined;
+      const expected = ['after calling setTimeout', 'async callback triggered'];
       // --end->
-
       expect(logs).toEqual(expected);
       done();
     }, 500);
@@ -27,9 +28,8 @@ describe('for asynchronous', () => {
 
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['after calling setTimeout', 'async callback triggered'];
         // --end->
-
         expect(logs).toEqual(expected);
         done();
       });
@@ -48,7 +48,8 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        
+        const expected = ['Failed! >_<'];
         // --end->
 
         expect(logs).toEqual(expected);
@@ -68,7 +69,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<'];
         // --end->
 
         expect(logs).toEqual(expected);
@@ -93,7 +94,7 @@ describe('for asynchronous', () => {
       .then(() => {
         // <--start
         // Please write down the correct value. You should write the final result directly.
-        const expected = undefined;
+        const expected = ['Caught! >_<', 'Continued', 'Another continued', 'Error handled: Holy ~'];
         // --end->
         expect(logs).toEqual(expected);
         done();
